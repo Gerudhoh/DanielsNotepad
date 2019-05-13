@@ -36,7 +36,7 @@ dispatcher.add_handler(start_handler)
 #Show Notes##################################################
 def add_note(note):
 	#TO DO: Add functionality for this to update a text file
-	fp = open("notes.txt", "a")
+	fp = open("uploads/notes.txt", "a")
 	fp.write(note)
 	fp.write("\n")
 	fp.close()
@@ -45,7 +45,7 @@ def show_notes(bot, update):
 	#TO DO: Add functionality for this to update a text file
 	allNotes = "*Notes:*\n"
 	
-	with open('notes.txt') as fp:
+	with open("uploads/notes.txt") as fp:
 		for line in fp:
 			allNotes += line
 			if len(line) == 1:
